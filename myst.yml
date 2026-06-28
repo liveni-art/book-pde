@@ -16,11 +16,15 @@ project:
     - title: Часть I
       children:
         - file: book/hello.md
+        - title: Канонический вид для 2-го порядка
+          file: book/canonical-2order-algorithm.md                
         - title: Методы решения УрЧП
           children:
             - file: book/solving_methods/characteristics-method.md
+
+            
     
-# jupyter tod documentation: https://jupyterbook.org/stable/authoring/table-of-contents/
+# jupyter toс documentation: https://jupyterbook.org/stable/authoring/table-of-contents/
 
 site:
   template: book-theme
