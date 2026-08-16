@@ -13,3 +13,8 @@
 ```bash
 jupyter book build 
 ```
+
+# Start locally
+```bash
+jupyter book start
+```
