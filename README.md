@@ -8,13 +8,20 @@
 
 Установить jupyter-book https://jupyterbook.org/stable/get-started/install/
 
-В папке проекта запустить
+# Init (create template)
+
+В папке проекта запустить (
 ```bash
 jupyter book init
 ```
 
-# Build
+# Build 
 Как запустить сборку:
 ```bash
 jupyter book build 
+```
+
+# Start locally
+```bash
+jupyter book start
 ```
