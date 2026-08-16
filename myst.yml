@@ -22,9 +22,10 @@ project:
             - file: book/characteristics-method/5-proof.md
             - file: book/characteristics-method/6-remarcs.md
     - title: Общая теория
-      children:
+      children: 
+        - file: book/common-theory/linearity-classif.md    
         - title: Канонический вид для 2-го порядка
-          file: book/common-theory/canonical-2order-algorithm.md                
+          file: book/common-theory/canonical-2order-algorithm.md                 
        
 
 # jupyter tod documentation: https://jupyterbook.org/stable/authoring/table-of-contents/
