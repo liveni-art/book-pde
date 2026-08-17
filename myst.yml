@@ -24,7 +24,7 @@ project:
     - title: Общая теория
       children: 
         - file: book/common-theory/linearity-classif.md    
-        - title: Канонический вид для 2-го порядка
+        - title: Канонический вид для 2-го порядка. Алгоритм
           file: book/common-theory/canonical-2order-algorithm.md                 
        
 
