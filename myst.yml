@@ -25,7 +25,10 @@ project:
       children: 
         - file: book/common-theory/linearity-classif.md    
         - title: Канонический вид для 2-го порядка. Алгоритм
-          file: book/common-theory/canonical-2order-algorithm.md                 
+          file: book/common-theory/canonical-2order-algorithm.md   
+    - title: Сведения из вышмата
+      children:
+        - file: book/high_math/lagrange_method_canon_view.md
        
 
 # jupyter tod documentation: https://jupyterbook.org/stable/authoring/table-of-contents/
