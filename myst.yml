@@ -28,7 +28,7 @@ project:
           file: book/common-theory/canonical-2order-algorithm.md   
     - title: Сведения из вышмата
       children:
-        - file: book/high_math/lagrange_method_canon_view.md
+        - file: book/high_math/quadratic-form-lagrange-method.md
        
 
 # jupyter tod documentation: https://jupyterbook.org/stable/authoring/table-of-contents/
