@@ -47,7 +47,7 @@ project:
 
             # Chapter 2 - Inequalities
             - file: book/lectures/inequalities/summary.md
-              title: 'Некторые неравенства связанные с УрЧП'
+              title: 'Некоторые неравенства связанные с УрЧП'
               children:
                 - file: book/lectures/inequalities/01-comparison-inequality.md
 
