@@ -3,7 +3,7 @@ version: 1
 
 project:
   id: 4da9cb15-177c-41f5-8c4e-6a24b4e87eab
-  title: Путевые заметки по изучению PDE
+  #title: Путевые заметки по изучению PDE
   keywords:
     - jupyter-book
     - pde
@@ -11,28 +11,50 @@ project:
   # To autogenerate a table of contents, run "jupyter book init --write-toc"
   toc:
     - file: book/index.md
-    - title: 'Лекции Джованни Беллеттини (ICTP Mathematics)'
+    - title: "Заметки по УРЧП"
+      
       children:
-        - title: Метод характеристик для уравнений 1го порядка (линейных и квазилинейных)
+          # ---- Part 0 ----      
+        - file: book/high-math/summary.md
+          title: 'Сведения из вышмата'
           children:
-            - file: book/characteristics-method/1-intro.md
-            - file: book/characteristics-method/2-linear-fixed-coeff.md
-            - file: book/characteristics-method/3-linear-variable-coeff.md
-            - file: book/characteristics-method/4-quasilinear.md
-            - file: book/characteristics-method/5-proof.md
-            - file: book/characteristics-method/6-remarcs.md
-    - title: Общая теория
-      children: 
-        - file: book/common-theory/linearity-classif.md    
-        - title: Канонический вид для 2-го порядка. Алгоритм
-          file: book/common-theory/canonical-2order-algorithm.md                 
-       
+            - file: book/high-math/quadratic-form-lagrange-method.md
 
-# jupyter tod documentation: https://jupyterbook.org/stable/authoring/table-of-contents/
+        # ---- Part 1 ----
+        - file: book/common-theory/summary.md
+          title: 'Общая теория'
+          children:
+            - file: book/common-theory/linearity-classif.md
+            - title: Канонический вид для 2-го порядка. Алгоритм
+              file: book/common-theory/canonical-2order-algorithm.md
+        
+ 
+        # ---- Part 2 ----
+        - file: book/lectures/summary.md
+          title: 'Лекции Джованни Беллеттини (ICTP Mathematics)'
+          children:
+
+            # Chapter 1 - Characteristics method
+            - file: book/lectures/characteristics-method/summary.md
+              title: 'Метод характеристик для уравнений 1го порядка (линейных и квазилинейных)'
+              children:
+                - file: book/lectures/characteristics-method/1-linear-fixed-coeff.md
+                - file: book/lectures/characteristics-method/2-linear-variable-coeff.md
+                - file: book/lectures/characteristics-method/3-quasilinear.md
+                - file: book/lectures/characteristics-method/4-proof.md
+                - file: book/lectures/characteristics-method/5-remarcs.md
+                - file: book/lectures/characteristics-method/6-examples.md
+
+            # Chapter 2 - Inequalities
+            - file: book/lectures/inequalities/summary.md
+              title: 'Некторые неравенства связанные с УрЧП'
+              children:
+                - file: book/lectures/inequalities/01-comparison-inequality.md
+
+# jupyter book toc documentation: https://jupyterbook.org/stable/authoring/table-of-contents/
 
 site:
   parts:
-
     primary_sidebar_footer: ""
   template: book-theme
   options:
