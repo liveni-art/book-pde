@@ -1,43 +1,30 @@
 # Краткая версия
 Краткая версия конспект курса по обобщённым функциям.
 
-$$
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\D}{\mathcal{D}}
-\newcommand{\Dp}{\mathcal{D}'}
-\newcommand{\Ss}{\mathcal{S}}
-\newcommand{\Ssp}{\mathcal{S}'}
-\newcommand{\E}{\mathcal{E}}
-\newcommand{\Ep}{\mathcal{E}'}
-$$
-
----
-
 ## 1. Основные пространства тестовых функций
 
-### Пространство $\D(\R^n)$ — финитные гладкие функции
+### Пространство $\mathcal{D}(\mathbb{R}^n)$ — финитные гладкие функции
 $$
-\D(\R^n) = \{\varphi \in C^\infty(\R^n) \mid \operatorname{supp} \varphi \text{ — компакт}\}
+\mathcal{D}(\mathbb{R}^n) = \{\varphi \in C^\infty(\mathbb{R}^n) \mid \operatorname{supp} \varphi \text{ — компакт}\}
 $$
 **Носитель:** $\operatorname{supp} \varphi = \overline{\{x \mid \varphi(x) \neq 0\}}$
 
-**Сходимость в $\D$:** $\varphi_k \to \varphi$, если:
+**Сходимость в $\mathcal{D}$:** $\varphi_k \to \varphi$, если:
 - $\exists R > 0$: $\operatorname{supp} \varphi_k \subset B_R$ $\forall k$
 - $\forall \alpha$: $D^\alpha \varphi_k \rightrightarrows D^\alpha \varphi$ (равномерно)
 
-### Пространство $\Ss(\R^n)$ — быстроубывающие функции (Шварца)
+### Пространство $\mathcal{S}(\mathbb{R}^n)$ — быстроубывающие функции (Шварца)
 $$
-\Ss = \left\{f \in C^\infty \mid \forall \alpha, \beta:\ \sup_{x} |x^\beta D^\alpha f(x)| < \infty\right\}
+\mathcal{S} = \left\{f \in C^\infty \mid \forall \alpha, \beta:\ \sup_{x} |x^\beta D^\alpha f(x)| < \infty\right\}
 $$
-**Сходимость в $\Ss$:** $\varphi_k \to \varphi$, если $\forall \alpha, \beta$: $x^\beta D^\alpha \varphi_k \rightrightarrows x^\beta D^\alpha \varphi$
+**Сходимость в $\mathcal{S}$:** $\varphi_k \to \varphi$, если $\forall \alpha, \beta$: $x^\beta D^\alpha \varphi_k \rightrightarrows x^\beta D^\alpha \varphi$
 
-### Пространство $\E(\R^n) = C^\infty(\R^n)$
+### Пространство $\mathcal{E}(\mathbb{R}^n) = C^\infty(\mathbb{R}^n)$
 **Сходимость:** равномерная на компактах всех производных.
 
 ### Вложения
 $$
-\D \subset \Ss \subset \E, \quad \overline{\D} = \Ss \text{ (в топологии } \Ss\text{)}
+\mathcal{D} \subset \mathcal{S} \subset \mathcal{E}, \quad \overline{\mathcal{D}} = \mathcal{S} \text{ (в топологии } \mathcal{S}\text{)}
 $$
 
 ---
@@ -45,23 +32,23 @@ $$
 ## 2. Обобщённые функции (распределения)
 
 ### Определение
-**Обобщённая функция** на $F$ ($F = \D, \Ss, \E$) — линейный непрерывный функционал $f: F \to \C$.
+**Обобщённая функция** на $F$ ($F = \mathcal{D}, \mathcal{S}, \mathcal{E}$) — линейный непрерывный функционал $f: F \to \mathbb{C}$.
 
 Обозначение: $\langle f, \varphi \rangle$ или $(f, \varphi)$.
 
-Пространства: $\Dp, \Ssp, \Ep$.
+Пространства: $\mathcal{D}', \mathcal{S}', \mathcal{E}'$.
 
-**Вложения:** $\Ep \subset \Ssp \subset \Dp$ (все плотные).
+**Вложения:** $\mathcal{E}' \subset \mathcal{S}' \subset \mathcal{D}'$ (все плотные).
 
 ### Регулярные и сингулярные ОФ
 - **Регулярная:** $\langle f, \varphi \rangle = \int f(x)\varphi(x)\,dx$, где $f \in L^1_{\text{loc}}$
 - **Сингулярная:** не представима в таком виде (например, $\delta$)
 
 ### Равенство ОФ
-$f = g$ на области $\Omega$, если $\langle f - g, \varphi \rangle = 0$ $\forall \varphi \in \D$ с $\operatorname{supp} \varphi \subset \Omega$.
+$f = g$ на области $\Omega$, если $\langle f - g, \varphi \rangle = 0$ $\forall \varphi \in \mathcal{D}$ с $\operatorname{supp} \varphi \subset \Omega$.
 
 ### Носитель ОФ
-$\operatorname{supp} f = \R^n \setminus O_f$, где $O_f$ — наибольшая открытая область, где $f = 0$.
+$\operatorname{supp} f = \mathbb{R}^n \setminus O_f$, где $O_f$ — наибольшая открытая область, где $f = 0$.
 
 **Примеры:**
 - $\operatorname{supp} \delta = \{0\}$
@@ -76,7 +63,7 @@ $f_k \to f$ в $\Fp$ (слабая сходимость), если $\langle f_k,
 ## 3. Операции над ОФ
 
 ### Умножение на гладкую функцию
-Для $f \in \Dp$, $g \in C^\infty$:
+Для $f \in \mathcal{D}'$, $g \in C^\infty$:
 $$
 \langle gf, \varphi \rangle = \langle f, g\varphi \rangle
 $$
@@ -113,7 +100,7 @@ $$
 ## 4. Тензорное произведение
 
 ### Определение
-Для $f \in \Dp(\R^n)$, $g \in \Dp(\R^m)$:
+Для $f \in \mathcal{D}'(\mathbb{R}^n)$, $g \in \mathcal{D}'(\mathbb{C}^m)$:
 $$
 \langle f \otimes g, \varphi(x,y) \rangle = \langle f(x), \langle g(y), \varphi(x,y) \rangle \rangle
 $$
@@ -136,13 +123,13 @@ $$
 
 ### Определение (для функций)
 $$
-(f * g)(x) = \int_{\R^n} f(t)g(x-t)\,dt
+(f * g)(x) = \int_{\mathbb{R}^n} f(t)g(x-t)\,dt
 $$
 
-### Условия существования в $\Dp$
+### Условия существования в $\mathcal{D}'$
 Свёртка $f * g$ определена, если:
 - $f$ или $g$ финитны
-- $\operatorname{supp} f$ и $\operatorname{supp} g$ ограничены с одной стороны (на $\R$)
+- $\operatorname{supp} f$ и $\operatorname{supp} g$ ограничены с одной стороны (на $\mathbb{C}$)
 - Более общие условия (Владимиров §8)
 
 ### Определение для ОФ
@@ -168,11 +155,11 @@ $$
 
 ### Определение
 $$
-F[f](\xi) = \hat{f}(\xi) = \int_{\R^n} f(x) e^{i\langle \xi, x \rangle}\,dx
+F[f](\xi) = \hat{f}(\xi) = \int_{\mathbb{R}^n} f(x) e^{i\langle \xi, x \rangle}\,dx
 $$
 
 ### Свойства
-- $F[f] \in C(\R^n)$, $|F[f](\xi)| \leq \|f\|_{L^1}$
+- $F[f] \in C(\mathbb{R}^n)$, $|F[f](\xi)| \leq \|f\|_{L^1}$
 - Дифференцирование: $F[D^\alpha f] = (-i\xi)^\alpha F[f]$
 - Умножение на $x^\alpha$: $F[x^\alpha f] = i^{|\alpha|} D^\alpha_\xi F[f]$
 - Сдвиг: $F[f(x-x_0)] = e^{i\langle x_0, \xi \rangle} F[f]$
@@ -187,12 +174,12 @@ $$
 ## 7. Преобразование Фурье ОФ
 
 ### Определение
-Для $f \in \Ssp$:
+Для $f \in \mathcal{S}'$:
 $$
-\langle F[f], \varphi \rangle = \langle f, F[\varphi] \rangle \quad \forall \varphi \in \Ss
+\langle F[f], \varphi \rangle = \langle f, F[\varphi] \rangle \quad \forall \varphi \in \mathcal{S}
 $$
 
-$F: \Ssp \to \Ssp$ — изоморфизм.
+$F: \mathcal{S}' \to \mathcal{S}'$ — изоморфизм.
 
 ### Обратное преобразование
 $$
@@ -222,9 +209,9 @@ $$
 ## 8. Решение дифференциальных уравнений в ОФ
 
 ### Уравнения вида $x^m y = 0$
-**Теорема:** Общее решение в $\Dp$:
+**Теорема:** Общее решение в $\mathcal{D}'$:
 $$
-y = \sum_{k=0}^{m-1} c_k \delta^{(k)}(x), \quad c_k \in \R
+y = \sum_{k=0}^{m-1} c_k \delta^{(k)}(x), \quad c_k \in \mathbb{C}
 $$
 
 **Примеры:**
@@ -243,7 +230,7 @@ $$
 ## 9. Фундаментальное решение
 
 ### Определение
-$\varepsilon \in \Dp$ — фундаментальное решение оператора $L(D)$, если:
+$\varepsilon \in \mathcal{D}'$ — фундаментальное решение оператора $L(D)$, если:
 $$
 L(D)\varepsilon = \delta
 $$
@@ -251,7 +238,7 @@ $$
 $\varepsilon$ определено с точностью до решения однородного уравнения $L(D)\varepsilon_0 = 0$.
 
 ### Теорема Мальгранжа-Эренпрейса
-Всякое уравнение $L(D)\varepsilon = \delta$ имеет решение в $\Dp(\R^n)$.
+Всякое уравнение $L(D)\varepsilon = \delta$ имеет решение в $\mathcal{D}'(\mathbb{R}^n)$.
 
 ### Метод решения через ФР
 Если $L(D)u = f$ и свёртка $\varepsilon * f$ существует, то:

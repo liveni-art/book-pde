@@ -1,17 +1,6 @@
 # Конспект курса: Обобщенные функции
 
-$$
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\D}{\mathcal{D}}
-\newcommand{\Dp}{\mathcal{D}'}
-\newcommand{\Ss}{\mathcal{S}}
-\newcommand{\Ssp}{\mathcal{S}'}
-$$
-
----
-
-## Обобщённые функции. Носитель. Пространство $\D(\R^n)$
+## Обобщённые функции. Носитель. Пространство $\mathcal{D}(\mathbb{R}^n)$
 
 **Уравнение Навье–Стокса:**
 
@@ -24,7 +13,7 @@ $$
 **Определение.** Носитель функции $\varphi$:
 
 $$
-\operatorname{supp} \varphi = \overline{\{x \in \R^n \mid \varphi(x) \neq 0\}}
+\operatorname{supp} \varphi = \overline{\{x \in \mathbb{R}^n \mid \varphi(x) \neq 0\}}
 $$
 
 Например, $\operatorname{supp} \omega = B_R(x)$ — носитель сосредоточен в шарике $B_R(x)$.
@@ -34,41 +23,41 @@ $$
 **Определение.** Нулевое множество функции $\varphi$:
 
 $$
-O_\varphi = \R^n \setminus \operatorname{supp} \varphi \quad \text{(открытое множество)}
+O_\varphi = \mathbb{R}^n \setminus \operatorname{supp} \varphi \quad \text{(открытое множество)}
 $$
 
-### Пространство $\D(\R^n)$
+### Пространство $\mathcal{D}(\mathbb{R}^n)$
 
-$\D(\R^n)$ — совокупность всех бесконечно дифференцируемых **финитных** функций в $\R^n$, т.е.
+$\mathcal{D}(\mathbb{R}^n)$ — совокупность всех бесконечно дифференцируемых **финитных** функций в $\mathbb{R}^n$, т.е.
 
 $$
-\D(\R^n) = \{\varphi \mid \varphi \in C^\infty(\R^n),\ \operatorname{supp} \varphi \subseteq B_R(x) \text{ для некоторого } R\}
+\mathcal{D}(\mathbb{R}^n) = \{\varphi \mid \varphi \in C^\infty(\mathbb{R}^n),\ \operatorname{supp} \varphi \subseteq B_R(x) \text{ для некоторого } R\}
 $$
 
-### Структура линейного пространства на $\D(\R^n)$
+### Структура линейного пространства на $\mathcal{D}(\mathbb{R}^n)$
 
-1) $\varphi, \psi \in \D(\R^n)$, $\forall \alpha, \beta \in \R$
+1) $\varphi, \psi \in \mathcal{D}(\mathbb{R}^n)$, $\forall \alpha, \beta \in \mathbb{R}$
 
-2) $\alpha\varphi + \beta\psi$ — гладкая, т.е. $\in C^\infty(\R^n)$, т.к. $\varphi, \psi \in C^\infty$
+2) $\alpha\varphi + \beta\psi$ — гладкая, т.е. $\in C^\infty(\mathbb{R}^n)$, т.к. $\varphi, \psi \in C^\infty$
 
 3) Носитель $\alpha\varphi + \beta\psi$ содержится в $B_k \supset B_{k_1} \cup B_{k_2}$, где $B_{k_1}, B_{k_2}$ — носители $\varphi$ и $\psi$ соответственно.
 
 4) $\alpha\varphi + \beta\psi$ — финитная.
 
-5) Т.е. $\D(\R^n)$ — **векторное (линейное) пространство**.
+5) Т.е. $\mathcal{D}(\mathbb{R}^n)$ — **векторное (линейное) пространство**.
 
-### Топология на $\D(\R^n)$ через сходимость
+### Топология на $\mathcal{D}(\mathbb{R}^n)$ через сходимость
 
 Хотим ввести топологию. Введём её через сходимость последовательностей.
 
-**Определение.** Последовательность $\varphi_k \in \D(\R^n)$ называется **сходящейся** к $\varphi \in \D(\R^n)$, если:
+**Определение.** Последовательность $\varphi_k \in \mathcal{D}(\mathbb{R}^n)$ называется **сходящейся** к $\varphi \in \mathcal{D}(\mathbb{R}^n)$, если:
 
 1) $\exists R > 0: \forall k \in \N \quad \operatorname{supp} \varphi_k \subset B_R$ (носители равномерно ограничены)
 
 2) $\forall$ мультииндекса $\alpha = (\alpha_1, \ldots, \alpha_n)$:
 
 $$
-D^\alpha \varphi_k \to D^\alpha \varphi \quad \text{равномерно в } \R^n
+D^\alpha \varphi_k \to D^\alpha \varphi \quad \text{равномерно в } \mathbb{R}^n
 $$
 
 ---
@@ -83,7 +72,7 @@ $$
 
 *[График: ступенчатая функция, равная 1 на $[-2\varepsilon, 2\varepsilon]$ и 0 вне этого интервала]*
 
-Возьмём $w_\varepsilon(x) \in \D(\R^1)$ — «шапочку» (гладкую финитную функцию).
+Возьмём $w_\varepsilon(x) \in \mathcal{D}(\mathbb{R}^1)$ — «шапочку» (гладкую финитную функцию).
 
 *[График: гладкий «колокол» с носителем в $[-\varepsilon, \varepsilon]$, максимум в нуле]*
 
@@ -95,7 +84,7 @@ $$
 
 **Доказать:**
 
-1) $y(x)$ — основная функция из $\D(\R^1)$
+1) $y(x)$ — основная функция из $\mathcal{D}(\mathbb{R}^1)$
 
 2) $0 \leq y(x) \leq 1$
 
@@ -105,16 +94,16 @@ $$
 
 ---
 
-## Пространство быстроубывающих функций $\Ss$ (лекция 3)
+## Пространство быстроубывающих функций $\mathcal{S}$ (лекция 3)
 
-### Определение пространства $\Ss$
+### Определение пространства $\mathcal{S}$
 
-$\Ss$ — множество всех $f \in C^\infty(\R^n)$ таких, что $f(x) \to 0$ при $|x| \to \infty$, причём вместе со всеми производными.
+$\mathcal{S}$ — множество всех $f \in C^\infty(\mathbb{R}^n)$ таких, что $f(x) \to 0$ при $|x| \to \infty$, причём вместе со всеми производными.
 
 **Пространство быстроубывающих функций:**
 
 $$
-\Ss = \left\{f \in C^\infty \;\middle|\; \forall \alpha = (\alpha_1, \ldots, \alpha_n),\ \forall \beta = (\beta_1, \ldots, \beta_n):\ x^\beta D^\alpha f(x) \xrightarrow{|x| \to \infty} 0\right\}
+\mathcal{S} = \left\{f \in C^\infty \;\middle|\; \forall \alpha = (\alpha_1, \ldots, \alpha_n),\ \forall \beta = (\beta_1, \ldots, \beta_n):\ x^\beta D^\alpha f(x) \xrightarrow{|x| \to \infty} 0\right\}
 $$
 
 где $x^\beta = x_1^{\beta_1} x_2^{\beta_2} \cdots x_n^{\beta_n}$.
@@ -123,39 +112,39 @@ $$
 
 ### Примеры
 
-1) $f(x) = 1 \notin \Ss$ — не стремится к 0.
+1) $f(x) = 1 \notin \mathcal{S}$ — не стремится к 0.
 
-2) $e^{-|x|^2} \in \Ss$ — быстро убывает.
+2) $e^{-|x|^2} \in \mathcal{S}$ — быстро убывает.
 
 ---
 
-## Свойства $\Ss$
+## Свойства $\mathcal{S}$
 
-3) $e^{|x|} \notin \Ss$ — не стремится к 0.
+3) $e^{|x|} \notin \mathcal{S}$ — не стремится к 0.
 
-4) $e^{-|x|} \notin \Ss$ — т.к. не гладкая (в нуле излом).
+4) $e^{-|x|} \notin \mathcal{S}$ — т.к. не гладкая (в нуле излом).
 
 ### Утверждение
 
 $$
-\D \subset \Ss
+\mathcal{D} \subset \mathcal{S}
 $$
 
 ### Упражнение
 
-$\Ss$ — векторное пространство.
+$\mathcal{S}$ — векторное пространство.
 
-### Топология на $\Ss$
+### Топология на $\mathcal{S}$
 
-Хотим наделить $\Ss$ топологией.
+Хотим наделить $\mathcal{S}$ топологией.
 
-**Определение.** Последовательность $\{\varphi_k\}_k \subset \Ss$ **сходится** к $\varphi \in \Ss$, если:
+**Определение.** Последовательность $\{\varphi_k\}_k \subset \mathcal{S}$ **сходится** к $\varphi \in \mathcal{S}$, если:
 
 $$
-\forall \alpha = (\alpha_1, \ldots, \alpha_n),\ \forall \beta = (\beta_1, \ldots, \beta_n): \quad x^\beta D^\alpha \varphi_k \to x^\beta D^\alpha \varphi \quad \text{равномерно в } \R^n
+\forall \alpha = (\alpha_1, \ldots, \alpha_n),\ \forall \beta = (\beta_1, \ldots, \beta_n): \quad x^\beta D^\alpha \varphi_k \to x^\beta D^\alpha \varphi \quad \text{равномерно в } \mathbb{R}^n
 $$
 
-**Пространство $\Ss$ с такой топологией** называется **основным пространством $\Ss$** (пространство Лорана Шварца).
+**Пространство $\mathcal{S}$ с такой топологией** называется **основным пространством $\mathcal{S}$** (пространство Лорана Шварца).
 
 ---
 
@@ -180,10 +169,10 @@ $$
 > Обобщённая функция — дельта-функция Дирака показала (пример обобщённой функции, не являющейся обычной).
 
 
-## Утверждение. $\D \subset \Ss$ плотно (относительно топологии в $\Ss$)
+## Утверждение. $\mathcal{D} \subset \mathcal{S}$ плотно (относительно топологии в $\mathcal{S}$)
 
 $$
-\overline{\D} = \Ss \quad \text{(замыкание } \D \text{ в } \Ss\text{)}
+\overline{\mathcal{D}} = \mathcal{S} \quad \text{(замыкание } \mathcal{D} \text{ в } \mathcal{S}\text{)}
 $$
 
 ---
@@ -192,8 +181,8 @@ $$
 
 ### Утверждения об умножении на гладкую функцию
 
-- **Для $\D$:** $\varphi \in \D$, $a \in C^\infty \Rightarrow a\varphi \in \D$
-- **Для $\Ss$:** $\varphi \in \Ss$, $a \in C^\infty \not\Rightarrow a\varphi \in \Ss$
+- **Для $\mathcal{D}$:** $\varphi \in \mathcal{D}$, $a \in C^\infty \Rightarrow a\varphi \in \mathcal{D}$
+- **Для $\mathcal{S}$:** $\varphi \in \mathcal{S}$, $a \in C^\infty \not\Rightarrow a\varphi \in \mathcal{S}$
 
 **Контрпример:**
 
@@ -202,14 +191,14 @@ $$
 $$
 
 $$
-a\varphi \equiv 1 \notin \Ss
+a\varphi \equiv 1 \notin \mathcal{S}
 $$
 
 ---
 
 ### Упражнение 6.11 (Владимиров)
 
-**Условие:** $\varphi \in \Ss$, $p$ — многочлен $\Rightarrow \varphi \cdot p \in \Ss$
+**Условие:** $\varphi \in \mathcal{S}$, $p$ — многочлен $\Rightarrow \varphi \cdot p \in \mathcal{S}$
 
 **Решение:**
 
@@ -252,13 +241,13 @@ $$
 x^\beta D^\alpha(\varphi(x) p(x)) = x^\beta \sum_{|\xi| \leq |\alpha|} r_\xi(x) D^\xi \varphi(x) = \sum_{|\xi| \leq |\alpha|} S_\xi(x) D^\xi \varphi(x) \xrightarrow{|x| \to \infty} 0
 $$
 
-т.к. $\varphi(x) \in \Ss$.
+т.к. $\varphi(x) \in \mathcal{S}$.
 
 ---
 
-## Согласованность со сходимостью в $\D$ (согласованность топологии)
+## Согласованность со сходимостью в $\mathcal{D}$ (согласованность топологии)
 
-$\D \subset \Ss$. Пусть $\varphi_k \to \varphi$ в $\D$, тогда:
+$\mathcal{D} \subset \mathcal{S}$. Пусть $\varphi_k \to \varphi$ в $\mathcal{D}$, тогда:
 
 1) $\exists R > 0$: $\operatorname{supp} \varphi_k \subset B_R(\rho)$ $\forall k > k_0$
 
@@ -273,7 +262,7 @@ $$
 $$
 
 $$
-\max_{\R^n} |x^\beta D^\alpha \varphi_k(x) - x^\beta D^\alpha \varphi(x)| = \max_{B_R(\rho)} |x^\beta D^\alpha \varphi_k - x^\beta D^\alpha \varphi|
+\max_{\mathbb{R}^n} |x^\beta D^\alpha \varphi_k(x) - x^\beta D^\alpha \varphi(x)| = \max_{B_R(\rho)} |x^\beta D^\alpha \varphi_k - x^\beta D^\alpha \varphi|
 $$
 
 $$
@@ -281,20 +270,20 @@ $$
 $$
 
 $$
-\Rightarrow x^\beta D^\alpha \varphi_k \to x^\beta D^\alpha \varphi \text{ равномерно} \iff \varphi_k \to \varphi \text{ в } \Ss
+\Rightarrow x^\beta D^\alpha \varphi_k \to x^\beta D^\alpha \varphi \text{ равномерно} \iff \varphi_k \to \varphi \text{ в } \mathcal{S}
 $$
 
 ---
 
 ### Упражнение 6.12 (Владимиров)
 
-**Утверждение.** Пусть $a \in C^\infty(\R^n)$ и
+**Утверждение.** Пусть $a \in C^\infty(\mathbb{R}^n)$ и
 
 $$
 |D^\alpha a(x)| \leq C(1+|x|^m)^{|\alpha|}
 $$
 
-Тогда $\varphi \in \Ss'(\R^n) \Rightarrow a\varphi \in \Ss'(\R^n)$.
+Тогда $\varphi \in \mathcal{S}'(\mathbb{R}^n) \Rightarrow a\varphi \in \mathcal{S}'(\mathbb{R}^n)$.
 
 **Упражнение\*:** показать, что $x^\beta D^\alpha(a\varphi) \to 0$.
 
@@ -302,9 +291,9 @@ $$
 
 ### Дополнительная задача
 
-**Дано:** $\varphi \in C^\infty(\R^n)$, $\varphi = 0$ при $x < a$, $\varphi$ ограничена вместе со всеми своими производными.
+**Дано:** $\varphi \in C^\infty(\mathbb{R}^n)$, $\varphi = 0$ при $x < a$, $\varphi$ ограничена вместе со всеми своими производными.
 
-**Доказать:** $\varphi(x) e^{-\delta x} \in \Ss$, где $\delta > 0$, $\delta \in \R$.
+**Доказать:** $\varphi(x) e^{-\delta x} \in \mathcal{S}$, где $\delta > 0$, $\delta \in \mathbb{R}$.
 
 *[Рисунок: функция, равная нулю при $x < a$, затем плавно возрастающая]*
 
@@ -574,11 +563,11 @@ $$
 
 Следует просто из линейности интеграла.
 
-**Проверка непрерывности в $\D$:**
+**Проверка непрерывности в $\mathcal{D}$:**
 
-$\varphi_k \to 0$ в $\D$ $\Rightarrow$ $\langle f, \varphi_k \rangle \to 0$
+$\varphi_k \to 0$ в $\mathcal{D}$ $\Rightarrow$ $\langle f, \varphi_k \rangle \to 0$
 
-Условия сходимости в $\D$:
+Условия сходимости в $\mathcal{D}$:
 
 1) $\exists R$: $\operatorname{supp} \varphi_k \subset B_R(\rho)$, т.е. $\varphi_k = 0$ вне $B_R(\rho)$
 
@@ -654,7 +643,7 @@ $$
    \left\langle \delta, \frac{1}{x^2}, \varphi \right\rangle = \text{v.p.} \int \frac{\varphi(x)}{x^2} dx
    $$
    
-   - 1) проверить, что это обобщённая ф-я из $\D$
+   - 1) проверить, что это обобщённая ф-я из $\mathcal{D}$
    - 2) сингулярная? (подсказка: вычисл. значение эфф.)
 
 ---
@@ -705,7 +694,7 @@ $$
 
 **v.p. ф-я $\dfrac{1}{x}$**
 
-Действие этой обобщённой ф-ции на ф-цию $\varphi \in \D$:
+Действие этой обобщённой ф-ции на ф-цию $\varphi \in \mathcal{D}$:
 
 $$
 \text{v.p.}\frac{1}{x} = \text{v.p.} \int_{\mathbb{R}} \frac{dx}{x} = \lim_{\varepsilon \to 0} \left(\int_{-\infty}^{-\varepsilon} \frac{dx}{x} + \int_{\varepsilon}^{\infty} \frac{dx}{x}\right)
@@ -721,7 +710,7 @@ $$
 \left\langle \text{v.p.}\frac{1}{x}, \varphi \right\rangle = \text{v.p.} \int_{\mathbb{R}} \frac{\varphi}{x} dx
 $$
 
-синг. обобщ. ф-я из $\D'$.
+синг. обобщ. ф-я из $\mathcal{D}'$.
 
 ---
 
@@ -3260,9 +3249,9 @@ $$
 
 ---
 
-## 📚 Итог по всему конспекту
+## Итог по всему конспекту
 
-Мы успешно оцифровали **все 81 страницу** рукописного конспекта по курсу «Обобщённые функции». Основные темы, которые были разобраны:
+Основные темы, которые были разобраны:
 
 ### Пространства тестовых функций
 - $\mathcal{D}(\mathbb{R}^n)$ — финитные гладкие функции, носитель, сходимость
@@ -3292,6 +3281,3 @@ $$
 - Решение $Lu = f$ через свёртку: $u = \varepsilon * f$
 - Уравнения вида $x^m y = 0$, $xy = 0$, $(x-1)y = 0$, $x(x-1)y = 0$
 
----
-
-Если нужно что-то **уточнить, дополнить или исправить** в уже сделанных частях — напиши, я поправлю. Также могу помочь собрать все части в один цельный `.md` файл с единой нумерацией и оглавлением. 🎓
