@@ -5,17 +5,17 @@
 
 Квазилинейное УРЧП обобщает линейный случай, позволяя коэффициентам зависеть от $u$:
 
-$$\sum_{i=1}^{N} b_i(x, u), \frac{\partial u}{\partial x_i} = f(x, u)$$
+$$\sum_{i=1}^{N} b_i(x, u) \frac{\partial u}{\partial x_i} = f(x, u)$$
 
 **«Квазилинейное»** означает: если заморозить $u$, уравнение линейно по $\nabla u$. Нет произведений или степеней производных — нелинейность входит только через коэффициенты.
 
 **Прототип — уравнение Бюргерса:**
 
 $$
-u_t + u, u_x = 0 \qquad \Longleftrightarrow \qquad u_t + \partial_x!\left(\tfrac{u^2}{2}\right) = 0
+u_t + u\, u_x = 0 \qquad \Longleftrightarrow \qquad u_t + \partial_x\!\left(\tfrac{u^2}{2}\right) = 0
 $$
 
-**Скалярные законы сохранения** $u_t + \partial_x F(u) = 0$ при $F \in C^1$ квазилинейны, так как переписываются в виде $u_t + F'(u), u_x = 0$.
+**Скалярные законы сохранения** $u_t + \partial_x F(u) = 0$ при $F \in C^1$ квазилинейны, так как переписываются в виде $u_t + F'(u)\, u_x = 0$.
 
 ### 3.2 Характеристическая система (квазилинейный случай)
 
@@ -35,9 +35,9 @@ $$
 
 Введём дополнительную переменную $y$, представляющую значение $u$, и определим **поднятое векторное поле** в $\mathbb{R}^{N+1}$:
 
-$$\mathcal{B}(x, y) = \bigl(B(x, y),; f(x, y)\bigr) \in \mathbb{R}^{N+1}$$
+$$\mathcal{B}(x, y) = \bigl(B(x, y), f(x, y)\bigr) \in \mathbb{R}^{N+1}$$
 
-УРЧП $\sum b_i(x, u), u_{x_i} = f(x, u)$ эквивалентно:
+УРЧП $\sum b_i(x, u)\, u_{x_i} = f(x, u)$ эквивалентно:
 
 $$\mathcal{B}(x, u(x)) \cdot (\nabla u, -1) = 0$$
 
@@ -49,11 +49,11 @@ $$\mathcal{B}(x, u(x)) \cdot (\nabla u, -1) = 0$$
 
 Составим матрицу $N \times N$:
 
-$$M(\sigma) = \begin{bmatrix} \dfrac{\partial \Phi}{\partial \sigma_1}(\sigma) & \cdots & \dfrac{\partial \Phi}{\partial \sigma_{N-1}}(\sigma) & B\bigl(\Phi(\sigma),, \bar{u}(\Phi(\sigma))\bigr) \end{bmatrix}$$
+$$M(\sigma) = \begin{bmatrix} \dfrac{\partial \Phi}{\partial \sigma_1}(\sigma) & \cdots & \dfrac{\partial \Phi}{\partial \sigma_{N-1}}(\sigma) & B\bigl(\Phi(\sigma), \bar{u}(\Phi(\sigma))\bigr) \end{bmatrix}$$
 
 **Условие трансверсальности:**
 
-$$\det M(\sigma) \neq 0 \qquad \forall, \sigma \in U$$
+$$\det M(\sigma) \neq 0 \qquad \forall\sigma \in U$$
 
 Это гарантирует, что $B$ не касается $\Sigma$ ни в одной точке.
 
@@ -66,15 +66,15 @@ $$\det M(\sigma) \neq 0 \qquad \forall, \sigma \in U$$
 
 ### 3.5 Разобранный пример (квазилинейный, $N = 2$)
 
-$$u, \frac{\partial u}{\partial x_1} + \frac{\partial u}{\partial x_2} = 1$$
+$$u\, \frac{\partial u}{\partial x_1} + \frac{\partial u}{\partial x_2} = 1$$
 
-с $\Sigma = {x_1 = x_2}$ (отрезок диагонали), параметризация $\Phi(\sigma) = (\sigma, \sigma)$, начальные данные $\bar{u}(\Phi(\sigma)) = \sigma/2$.
+с $\Sigma = \{x_1 = x_2\}$ (отрезок диагонали), параметризация $\Phi(\sigma) = (\sigma, \sigma)$, начальные данные $\bar{u}(\Phi(\sigma)) = \sigma/2$.
 
-**О выборе $\sigma \in (0,1)$.** Прямая ${x_1 = x_2}$ бесконечна, но начальные данные заданы лишь на отрезке $x_1 \in [0, 1]$. Выбор $\sigma \in (0,1)$ не навязан УРЧП — это выбор задачи. Однако он не вполне произволен: условие трансверсальности даёт $\det M = 1 - \sigma/2 \neq 0$, т.е. $\sigma \neq 2$. Интервал $(0,1)$ безопасно удалён от этой особенности.
+**О выборе $\sigma \in (0,1)$.** Прямая $\{x_1 = x_2\}$ бесконечна, но начальные данные заданы лишь на отрезке $x_1 \in [0, 1]$. Выбор $\sigma \in (0,1)$ не навязан УРЧП — это выбор задачи. Однако он не вполне произволен: условие трансверсальности даёт $\det M = 1 - \sigma/2 \neq 0$, т.е. $\sigma \neq 2$. Интервал $(0,1)$ безопасно удалён от этой особенности.
 
 **Проверка трансверсальности.** $B(x, y) = (y, 1)$, в точке $\Phi(\sigma)$ при $y = \sigma/2$:
 
-$$M(\sigma) = \begin{pmatrix} 1 & \sigma/2 \ 1 & 1 \end{pmatrix}, \qquad \det M = 1 - \frac{\sigma}{2} \neq 0 \text{ при } \sigma \in (0,1). ;\checkmark$$
+$$M(\sigma) = \begin{pmatrix} 1 & \sigma/2 \\ 1 & 1 \end{pmatrix}, \qquad \det M = 1 - \frac{\sigma}{2} \neq 0 \text{ при } \sigma \in (0,1).\ \checkmark$$
 
 **Характеристическая система:**
 
