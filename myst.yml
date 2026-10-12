@@ -26,7 +26,7 @@ project:
         - file: book/common-theory/linearity-classif.md    
         - title: Канонический вид для 2-го порядка. Алгоритм
           file: book/common-theory/canonical-2order-algorithm.md   
-        - title: Коспект курса Медведева В.О. по обобщённым функциям
+        - title: Обобщённые функции
           children:
             - file: book/common-theory/generalized-funcs-course/course-medvedev.md  
             - file: book/common-theory/generalized-funcs-course/course-medvedev-summary.md  
