@@ -1,62 +1,85 @@
 # Краткий конспект
 Краткое инфо про обобщённые функции и сопутствующую теорию.
 
-## 1. Основные пространства тестовых функций
+## 1. Пространства основных (тестовых) функций
 
-### Пространство $\mathcal{D}(\mathbb{R}^n)$ — финитные гладкие функции
+### 1.1. Пространство $\mathcal{D} \equiv \mathcal{D}(\mathbb{R}^n)$ — пространство финитных бесконечно дифференцируемых функций.
 $$
 \mathcal{D}(\mathbb{R}^n) = \{\varphi \in C^\infty(\mathbb{R}^n) \mid \operatorname{supp} \varphi \text{ — компакт}\}
 $$
-**Носитель:** $\operatorname{supp} \varphi = \overline{\{x \mid \varphi(x) \neq 0\}}$
+**Носитель (классической функции):** $\operatorname{supp} \varphi = \overline{\{x \mid \varphi(x) \neq 0\}}$
 
-**Сходимость в $\mathcal{D}$:** $\varphi_k \to \varphi$, если:
-- $\exists R > 0$: $\operatorname{supp} \varphi_k \subset B_R$ $\forall k$
-- $\forall \alpha$: $D^\alpha \varphi_k \rightrightarrows D^\alpha \varphi$ (равномерно)
+**Сходимость в $\mathcal{D}$:**  $\ \varphi_k \to \varphi$ при $k \to \infty$ , если:
+- $\exists R > 0$:  $\quad \forall k:$  $\operatorname{supp} \varphi_k \subset B_R$ 
 
-### Пространство $\mathcal{S}(\mathbb{R}^n)$ — быстроубывающие функции (Шварца)
+    (существует шарик $B_R$, в который укладываются носители всех функций из последовательности $\varphi_k$ )
+- $\forall \alpha$: $\quad D^\alpha \varphi_k \rightrightarrows D^\alpha \varphi$ равномерно по $x$, $\quad$  где $\alpha -$ мультииндекс.
+
+    (сама функция и все её произвозные сходятся равномерно к предельной функции и её производным соответственно)
+
+    ("$\rightrightarrows$" здесь и далее означает равномерную сходимость)
+
+### 1.2. Пространство $\mathcal{S} \equiv \mathcal{S}(\mathbb{R}^n)$ — пространство быстроубывающих функций (пространство Шварца)
 $$
-\mathcal{S} = \left\{f \in C^\infty \mid \forall \alpha, \beta:\ \sup_{x} |x^\beta D^\alpha f(x)| < \infty\right\}
+\mathcal{S(\mathbb{R}^n)} = \left\{    \varphi \in C^\infty(\mathbb{R}^n)  \mid \forall \alpha, \beta:\ \sup_{x} |x^\beta D^\alpha f(x)| < \infty\right\},
 $$
-**Сходимость в $\mathcal{S}$:** $\varphi_k \to \varphi$, если $\forall \alpha, \beta$: $x^\beta D^\alpha \varphi_k \rightrightarrows x^\beta D^\alpha \varphi$
+то есть, это множество бесконечно гладких в $\mathbb{R}^n$  функций, убывающих при $|x| \to \infty$ вместе со всеми производными быстрее любой степени $|x|^{-1}$.
 
-### Пространство $\mathcal{E}(\mathbb{R}^n) = C^\infty(\mathbb{R}^n)$
-**Сходимость:** равномерная на компактах всех производных.
+**Сходимость в $\mathcal{S}$:**  $\ \varphi_k \to \varphi$ при $k \to \infty$ , если: 
+- $\forall \alpha, \beta$: $\quad x^\beta D^\alpha \varphi_k \rightrightarrows x^\beta D^\alpha \varphi$ равномерно по $x$
 
-### Вложения
+### 1.3. Пространство $\mathcal{E}(\mathbb{R}^n) = C^\infty(\mathbb{R}^n)$ — пространство бесконечно дифференцируемых функцй 
+**Сходимость в $\mathcal{E}$:** $\ \varphi_k \to \varphi$ при $k \to \infty$ , если для любого компактного множества $K \subset \mathbb{R}^n$ выполняется:
+- $\forall \alpha$: $\quad D^\alpha \varphi_k \rightrightarrows D^\alpha \varphi$ равномерно по $x \in K$,$\quad$ где $\alpha -$ мультииндекс.
+
+### 1.4. Вложения
 $$
-\mathcal{D} \subset \mathcal{S} \subset \mathcal{E}, \quad \overline{\mathcal{D}} = \mathcal{S} \text{ (в топологии } \mathcal{S}\text{)}
+\mathcal{D} \subset \mathcal{S} \subset \mathcal{E}
 $$
 
 ---
 
-## 2. Обобщённые функции (распределения)
+## 2. Обобщённые функции 
 
-### Определение
-**Обобщённая функция** на $F$ ($F = \mathcal{D}, \mathcal{S}, \mathcal{E}$) — линейный непрерывный функционал $f: F \to \mathbb{C}$.
+### 2.1. Определение
+**Обобщённая функция** на $\mathcal{F}$ $(\mathcal{F} = \mathcal{D}, \mathcal{S}, \mathcal{E}$) — это линейный непрерывный функционал $f: \mathcal{F} \to \mathbb{R}$.
 
-Обозначение: $\langle f, \varphi \rangle$ или $(f, \varphi)$.
+Обозначение действия ОФ $f$ на $\varphi$: $\langle f, \varphi \rangle$ или $(f, \varphi)$.
 
-Пространства: $\mathcal{D}', \mathcal{S}', \mathcal{E}'$.
+Пространства обобщенных функций обозначаются соответственно: $\mathcal{D}', \mathcal{S}', \mathcal{E}'$.
 
-**Вложения:** $\mathcal{E}' \subset \mathcal{S}' \subset \mathcal{D}'$ (все плотные).
+**Вложения:** $\mathcal{E}' \subset \mathcal{S}' \subset \mathcal{D}'$ (все вложения плотные).
 
-### Регулярные и сингулярные ОФ
-- **Регулярная:** $\langle f, \varphi \rangle = \int f(x)\varphi(x)\,dx$, где $f \in L^1_{\text{loc}}$
-- **Сингулярная:** не представима в таком виде (например, $\delta$)
 
-### Равенство ОФ
-$f = g$ на области $\Omega$, если $\langle f - g, \varphi \rangle = 0$ $\forall \varphi \in \mathcal{D}$ с $\operatorname{supp} \varphi \subset \Omega$.
+### 2.2. Сходимость ОФ
+$f_k \to f$ в $\mathcal{F}'$ (последовательность обобщенных функций $f_k$ сходится к обобщенной функции $f$), если $\langle f_k, \varphi \rangle \to \langle f, \varphi \rangle$ при $k \to \infty$  для любых $\varphi \in \mathcal{F}$, где $\mathcal{F} = \mathcal{D}, \mathcal{S}, \mathcal{E}$.
 
-### Носитель ОФ
-$\operatorname{supp} f = \mathbb{R}^n \setminus O_f$, где $O_f$ — наибольшая открытая область, где $f = 0$.
 
-**Примеры:**
+### 2.3. Равенство ОФ
+$f = 0$ в области $\Omega$, если $\langle f, \varphi \rangle = 0 \quad \forall \varphi \in \mathcal{D}$ таких, что $\operatorname{supp}\varphi = \Omega$
+
+$f = g$ в области $\Omega$, если $\langle f - g, \varphi \rangle = 0$ $\forall \varphi \in \mathcal{D}$ с $\operatorname{supp} \varphi = \Omega$.
+
+$f = g$, если $\langle f - g, \varphi \rangle = 0$ $\forall \varphi \in \mathcal{D}$.
+
+### 2.4. Носитель ОФ
+**Нулевым множеством** $O_f$ обобщенной функции $f$ называется объединение всех областей $\Omega \subset \mathbb{R}^n$, таких, что $f = 0$ в $\Omega$.
+
+**Носителем** обобщенной функции называется множество 
+
+$$
+\operatorname{supp} f = \mathbb{R}^n \setminus O_f.
+$$
+
+Если $\operatorname{supp} f$ - ограниченное множество, то $f$ называется **финитной ОФ**.
+
+**Примеры носителей:**
 - $\operatorname{supp} \delta = \{0\}$
 - $\operatorname{supp} \theta = [0, +\infty)$
-- $\delta_S$: $\langle \delta_S, \varphi \rangle = \int_S \varphi\,dS$, $\operatorname{supp} \delta_S = S$
-
-### Сходимость ОФ
-$f_k \to f$ в $\Fp$ (слабая сходимость), если $\langle f_k, \varphi \rangle \to \langle f, \varphi \rangle$ $\forall \varphi \in \F$.
+  
+### 2.5. Регулярные и сингулярные ОФ
+- **$f$ - регулярная ОФ**, если она представима в виде: $\langle f, \varphi \rangle = \int f(x)\varphi(x)\,dx$, где $f \in L^1_{\text{loc}}$
+- **сингулярная,** если не представима в таком виде (например, $\delta$)
 
 ---
 
