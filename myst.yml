@@ -29,7 +29,7 @@ project:
         - title: Обобщённые функции
           children:
             - file: book/common-theory/generalized-funcs-course/course-medvedev.md  
-            - file: book/common-theory/generalized-funcs-course/course-medvedev-summary.md  
+            - file: book/common-theory/generalized-funcs-course/gen-funcs-summary.md  
     - title: Сведения из вышмата
       children:
         - file: book/high_math/quadratic-form-lagrange-method.md
